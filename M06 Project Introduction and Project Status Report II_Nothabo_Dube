@@ -1,0 +1,48 @@
+import tkinter as tk
+
+class LetsCookApp:
+    def __init__(self, master):
+        self.master = master
+        master.title("Let's Cook GUI Application")
+
+        # Create the welcome message and buttons
+        self.label = tk.Label(master, text="WELCOME LET'S COOK WITH LOVE")
+        self.label.pack()
+
+        self.ingredients_button = tk.Button(master, text="GET INGREDIENTS", command=self.view_manual)
+        self.ingredients_button.pack()
+
+        self.create_button = tk.Button(master, text="CREATE YOUR OWN", command=self.add_ingredient)
+        self.create_button.pack()
+
+        self.manual_button = tk.Button(master, text="USER MANUAL", command=self.open_manual)
+        self.manual_button.pack()
+
+    def view_manual(self):
+        # Create the view manual window
+        self.view_manual_window = tk.Toplevel(self.master)
+        self.view_manual_window.title("View Manual")
+
+        # Add the necessary widgets for displaying saved recipes, filtering ingredients, and editing instructions
+        # ...
+
+    def add_ingredient(self):
+        # Create the add ingredient window
+        self.add_ingredient_window = tk.Toplevel(self.master)
+        self.add_ingredient_window.title("Add Ingredient")
+
+        # Add the necessary widgets for adding and editing new ingredients, searching for ingredients, and creating wish lists
+        # ...
+
+    def open_manual(self):
+        # Create the user manual window
+        self.manual_window = tk.Toplevel(self.master)
+        self.manual_window.title("User Manual")
+
+        # Add the necessary widgets for providing instructions on how to use the application and its features
+        # ...
+
+
+root = tk.Tk()
+app = LetsCookApp(root)
+root.mainloop()
